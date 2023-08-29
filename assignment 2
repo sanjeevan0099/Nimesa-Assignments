@@ -1,0 +1,70 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Scanner;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class WeatherAPIProgram {
+
+    private static final String API_URL = "https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22";
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+        
+        do {
+            displayMenu();
+            choice = scanner.nextInt();
+            
+            switch (choice) {
+                case 1:
+                    getTemperature();
+                    break;
+                case 2:
+                    getWindSpeed();
+                    break;
+                case 3:
+                    getPressure();
+                    break;
+                case 0:
+                    System.out.println("Exiting program.");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please choose a valid option.");
+            }
+        } while (choice != 0);
+        
+        scanner.close();
+    }
+    
+    private static void displayMenu() {
+        System.out.println("1) Get Temperature");
+        System.out.println("2) Get Wind Speed");
+        System.out.println("3) Get Pressure");
+        System.out.println("0) Exit");
+        System.out.print("Enter your choice: ");
+    }
+    
+    private static void getTemperature() {
+
+    }
+    
+    private static void getWindSpeed() {
+
+    }
+    
+    private static void getPressure() {
+
+    }
+}
+
+out put :
+1) Get Temperature
+2) Get Wind Speed
+3) Get Pressure
+0) Exit
